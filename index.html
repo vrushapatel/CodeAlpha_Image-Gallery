@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">My Image Gallery</h1>
+
+<!-- Filters -->
+<div class="filters">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('single')">Single</button>
+  <button onclick="filterImages('group')">Group</button>
+  <button onclick="filterImages('selfie')">Selfie</button>
+</div>
+
+<!-- Gallery -->
+<div class="gallery">
+  <img src="./g1.png" class="group" onclick="openLightbox(0)">
+  <img src="./1.png" class="selfie" onclick="openLightbox(1)">
+  <img src="./s1.png" class="single" onclick="openLightbox(2)">
+
+  <img src="./g2.png" class="group" onclick="openLightbox(3)">
+  <img src="./s2.png" class="single" onclick="openLightbox(4)">
+  <img src="./2.png" class="selfie" onclick="openLightbox(5)">
+
+ 
+  <img src="./g3.png" class="group" onclick="openLightbox(6)">
+  <img src="./s3.png" class="single" onclick="openLightbox(7)">
+  <img src="./g4.png" class="group" onclick="openLightbox(8)">
+</div>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img">
+
+  <button class="prev" onclick="changeSlide(-1)">❮</button>
+  <button class="next" onclick="changeSlide(1)">❯</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
